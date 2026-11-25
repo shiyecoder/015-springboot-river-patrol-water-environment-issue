@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="zh-CN"><head><meta charset="utf-8"><title>调度派单台 · 河道巡查与水环境问题处置系统</title>
+<link rel="stylesheet" href="../mock.css"></head>
+<body><div class="app">
+<aside class="side"><div class="brand"><span class="dot"></span>水环境巡查处置平台</div><nav><div class="grp">工作台</div><a class="item" href="dashboard.html"><svg><use href="../icons.svg#i-dashboard"/></svg>水环境热点看板</a><div class="grp">河道档案</div><a class="item" href="section-list.html"><svg><use href="../icons.svg#i-river"/></svg>河道断面</a><a class="item" href="section-detail.html"><svg><use href="../icons.svg#i-point"/></svg>断面详情</a><div class="grp">巡查管理</div><a class="item" href="task-list.html"><svg><use href="../icons.svg#i-task"/></svg>计划任务</a><a class="item" href="task-execute.html"><svg><use href="../icons.svg#i-water"/></svg>巡查记录</a><div class="grp">问题处置</div><a class="item" href="issue-report.html"><svg><use href="../icons.svg#i-issue"/></svg>问题上报</a><a class="item on" href="dispatch.html"><svg><use href="../icons.svg#i-dispatch"/></svg>调度派单</a><a class="item" href="disposal.html"><svg><use href="../icons.svg#i-disposal"/></svg>整改跟踪</a><a class="item" href="review.html"><svg><use href="../icons.svg#i-review"/></svg>复核销号</a><div class="grp">统计分析</div><a class="item" href="hotspot.html"><svg><use href="../icons.svg#i-chart"/></svg>热点看板</a><a class="item" href="rule-config.html"><svg><use href="../icons.svg#i-rule"/></svg>规则配置</a><div class="grp">系统管理</div><a class="item" href="sys.html"><svg><use href="../icons.svg#i-user"/></svg>用户与权限</a></nav></aside>
+<div class="main"><header class="top"><div class="crumb">河道巡查 / <b>问题处置</b></div>
+<div class="right"><span>河长办调度员 张启明</span><span>消息 3</span><div class="avatar">张</div></div></header>
+<main class="content">
+<h1 class="page">调度派单台</h1><p class="subtitle">河长办研判问题级别、指定责任单位与协办单位，重大问题自动建立督办</p>
+<div class="filter">
+ <div class="f"><label>处置状态</label><select class="sel"><option>待派单</option><option>全部</option></select></div>
+ <div class="f"><label>问题级别</label><select class="sel"><option>全部</option><option>重大</option></select></div>
+ <div class="f"><label>问题类型</label><select class="sel"><option>全部类型</option></select></div>
+ <div class="f"><label>上报时间</label><input class="inp" type="date" value="2026-10-31"></div>
+ <button class="btn primary">查询</button><button class="btn">重置</button>
+ <div style="margin-left:auto;display:flex;gap:8px"><button class="btn">批量派发</button><button class="btn">导出</button></div>
+</div>
+<div class="grid2"><div class="card" style="padding:0"><div class="tbl-wrap" style="border:none">
+<div class="tbl-wrap"><table><thead><tr><th class="nowrap">编号</th><th>问题</th><th class="nowrap">级别</th><th class="nowrap">状态</th><th class="nowrap">超时</th><th class="nowrap">操作</th></tr></thead><tbody><tr><td class="nowrap">WT-2026-0131</td><td>工业园排口持续性泡沫排放</td><td class="nowrap"><span class="badge">重大</span></td><td class="nowrap"><span class="tag t-1">待派单</span></td><td class="nowrap"><span class="badge">剩余 3h</span></td><td class="nowrap">选中</td></tr><tr><td class="nowrap">WT-2026-0130</td><td>老桥下岸线垃圾堆积</td><td class="nowrap">一般</td><td class="nowrap"><span class="tag t-2">处置中</span></td><td class="nowrap">—</td><td class="nowrap">查看</td></tr><tr><td class="nowrap">WT-2026-0126</td><td>集镇段生活污水直排</td><td class="nowrap"><span class="badge">重大</span></td><td class="nowrap"><span class="tag t-3">待复查</span></td><td class="nowrap">已超时 6h</td><td class="nowrap">查看</td></tr><tr><td class="nowrap">WT-2026-0125</td><td>北段水面油膜</td><td class="nowrap">一般</td><td class="nowrap"><span class="tag t-0">待确认</span></td><td class="nowrap">—</td><td class="nowrap">研判</td></tr></tbody></table></div>
+</div></div>
+<div class="card" style="box-shadow:0 8px 24px rgba(21,52,74,.18)"><div class="card-hd"><h2>派单 · WT-2026-0131</h2><span class="hint">抽屉视图</span></div>
+<dl class="kv" style="margin-bottom:12px"><dt>问题级别</dt><dd><span class="badge">重大</span> 非法排放 · 白鹭溪·工业园段</dd>
+<dt>已耗时</dt><dd class="num">2 小时 14 分（重大问题时限 4 小时）</dd><dt>上报人</dt><dd>周志远 · 2026-10-31 17:05</dd></dl>
+<div class="f" style="margin-bottom:10px"><label>责任单位 *</label><select class="sel" style="width:100%"><option>园区管委会（牵头）</option><option>水务集团</option></select></div>
+<div class="f" style="margin-bottom:10px"><label>协办单位</label><select class="sel" style="width:100%"><option>生态环境分局</option><option>城管中队</option></select></div>
+<div class="f" style="margin-bottom:10px"><label>处置要求 *</label><textarea class="inp" style="width:100%;height:70px;padding:8px 10px">立即封堵排口，24 小时内提交溯源结果，3 日内完成整改。</textarea></div>
+<div class="f" style="margin-bottom:10px"><label>完成期限 *</label><input class="inp" value="2026-11-03 18:00" style="width:100%"></div>
+<div class="f" style="margin-bottom:10px"><label>临时措施（重大问题必填）*</label><textarea class="inp" style="width:100%;height:60px;padding:8px 10px">下游设置围油栏与吸油毡，暂停亲水平台开放。</textarea></div>
+<div class="f" style="margin-bottom:14px"><label>建立督办</label><select class="sel" style="width:100%"><option>是 · 每日督办</option><option>否</option></select></div>
+<div style="display:flex;gap:8px;justify-content:flex-end"><button class="btn">取消</button><button class="btn primary">确认派单</button></div>
+</div></div></main></div></div></body></html>

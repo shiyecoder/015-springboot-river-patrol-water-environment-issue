@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="zh-CN"><head><meta charset="utf-8"><title>复核销号 · 河道巡查与水环境问题处置系统</title>
+<link rel="stylesheet" href="../mock.css"></head>
+<body><div class="app">
+<aside class="side"><div class="brand"><span class="dot"></span>水环境巡查处置平台</div><nav><div class="grp">工作台</div><a class="item" href="dashboard.html"><svg><use href="../icons.svg#i-dashboard"/></svg>水环境热点看板</a><div class="grp">河道档案</div><a class="item" href="section-list.html"><svg><use href="../icons.svg#i-river"/></svg>河道断面</a><a class="item" href="section-detail.html"><svg><use href="../icons.svg#i-point"/></svg>断面详情</a><div class="grp">巡查管理</div><a class="item" href="task-list.html"><svg><use href="../icons.svg#i-task"/></svg>计划任务</a><a class="item" href="task-execute.html"><svg><use href="../icons.svg#i-water"/></svg>巡查记录</a><div class="grp">问题处置</div><a class="item" href="issue-report.html"><svg><use href="../icons.svg#i-issue"/></svg>问题上报</a><a class="item" href="dispatch.html"><svg><use href="../icons.svg#i-dispatch"/></svg>调度派单</a><a class="item" href="disposal.html"><svg><use href="../icons.svg#i-disposal"/></svg>整改跟踪</a><a class="item on" href="review.html"><svg><use href="../icons.svg#i-review"/></svg>复核销号</a><div class="grp">统计分析</div><a class="item" href="hotspot.html"><svg><use href="../icons.svg#i-chart"/></svg>热点看板</a><a class="item" href="rule-config.html"><svg><use href="../icons.svg#i-rule"/></svg>规则配置</a><div class="grp">系统管理</div><a class="item" href="sys.html"><svg><use href="../icons.svg#i-user"/></svg>用户与权限</a></nav></aside>
+<div class="main"><header class="top"><div class="crumb">河道巡查 / <b>问题处置</b></div>
+<div class="right"><span>复查人员 赵敏</span><span>消息 3</span><div class="avatar">张</div></div></header>
+<main class="content">
+<h1 class="page">复核销号 · WT-2026-0126</h1><p class="subtitle"><span class="tag t-3">待复查</span> 石鼓渠·集镇段 · 处置单位：街道办 · 复查人：赵敏</p>
+<div class="grid2"><div>
+<div class="card"><div class="card-hd"><h2>现场复核记录</h2><span class="hint">复查人不可为原处置人</span></div>
+<div class="filter">
+ <div class="f"><label>复查时间 *</label><input class="inp" value="2026-11-01 10:20"></div>
+ <div class="f"><label>现场水色</label><select class="sel"><option>正常</option><option>轻微异常</option></select></div>
+ <div class="f"><label>气味</label><select class="sel"><option>无</option><option>轻微</option></select></div>
+ <div class="f"><label>pH</label><input class="inp" value="7.2" style="width:90px"></div>
+ <div class="f"><label>浊度</label><input class="inp" value="18.0" style="width:90px"></div>
+ <div class="f"><label>溶解氧</label><input class="inp" value="5.6" style="width:90px"></div>
+</div>
+<div class="f" style="margin-bottom:10px"><label>复核结论 *</label><textarea class="inp" style="width:100%;height:70px;padding:8px 10px">排口已封堵，水面无污水流入，水质指标恢复至Ⅳ类，整改到位。</textarea></div>
+<div class="f" style="margin-bottom:12px"><label>现场照片 *</label><div class="thumbs"><div class="thumb"><img src="../assets/section-04.jpg" alt="复查"></div><div class="thumb"><img src="../assets/section-05.jpg" alt="复查"></div><div class="thumb"><div class="upl">＋ 上传</div></div></div></div>
+<div style="display:flex;gap:8px"><button class="btn primary">通过并关闭</button><button class="btn danger">驳回继续整改</button><button class="btn">转他人复查</button></div>
+</div>
+<div class="card"><div class="card-hd"><h2>处置结果对照</h2></div>
+<div class="tbl-wrap"><table><thead><tr><th>项目</th><th>派单要求</th><th>处置上报</th></tr></thead><tbody><tr><td>封堵排口</td><td>3 日内完成</td><td>2026-10-31 已完成</td></tr><tr><td>水质恢复</td><td>达Ⅳ类以上</td><td>pH 7.2 / 浊度 18 / DO 5.6</td></tr><tr><td>凭证</td><td>现场照片 ≥2 张</td><td>已上传 3 张</td></tr></tbody></table></div>
+</div></div>
+<div>
+<div class="card" style="border-color:#B9CBD2"><div class="card-hd"><h2>问题复发热点识别 · 计算结果</h2><span class="hint">规则 v3 · 2026-11-01 10:22</span></div>
+<div style="display:flex;align-items:baseline;gap:10px;margin-bottom:6px">
+ <span class="num" style="font-size:32px;font-weight:600;color:#15344A">78.4</span>
+ <span class="tag t-x">高复发风险</span><span class="hint" style="font-size:12px;color:#8B9AA1">满分 100，阈值 高≥75 / 中≥50</span></div>
+<div class="note" style="margin-bottom:12px">推荐结论：该河段应纳入下一季度专项治理清单。主要驱动因素为「近 90 天同类问题 7 次」与「处置时长 96 小时」。</div>
+<div class="tbl-wrap"><table><thead><tr><th>输入因素</th><th class="nowrap">原始值</th><th class="nowrap">权重</th><th class="nowrap">得分</th><th>说明</th></tr></thead><tbody><tr><td>河段位置</td><td class="nowrap">集镇段（敏感区）</td><td class="nowrap">15%</td><td class="nowrap">12.0</td><td>距取水口 800m</td></tr><tr><td>问题类型</td><td class="nowrap">生活污水直排</td><td class="nowrap">20%</td><td class="nowrap">18.0</td><td>非法排放权重最高</td></tr><tr><td>近 90 天次数</td><td class="nowrap">7 次</td><td class="nowrap">25%</td><td class="nowrap">23.5</td><td>超阈值 4 次</td></tr><tr><td>平均处置时长</td><td class="nowrap">96 小时</td><td class="nowrap">15%</td><td class="nowrap">8.4</td><td>超时限 1.6 倍</td></tr><tr><td>复核结果</td><td class="nowrap">驳回 1 次</td><td class="nowrap">15%</td><td class="nowrap">10.5</td><td>首轮不合格</td></tr><tr><td>水质变化</td><td class="nowrap">劣Ⅴ类→Ⅳ类</td><td class="nowrap">10%</td><td class="nowrap">6.0</td><td>改善但未达标</td></tr></tbody></table></div>
+<div style="display:flex;gap:8px;margin-top:10px"><button class="btn sm">查看完整计算留痕</button><button class="btn sm">重新计算</button></div>
+<div style="margin-top:14px;border-top:1px solid #DCE5E8;padding-top:12px">
+ <div class="f" style="margin-bottom:8px"><label>人工调整结果</label><select class="sel"><option>维持系统结果（高）</option><option>调整为中</option><option>调整为低</option></select></div>
+ <div class="f" style="margin-bottom:8px"><label>调整原因（≥5 字）*</label><input class="inp" style="width:100%" value="该段已列入市级整治计划，风险可控"></div>
+ <div style="display:flex;gap:8px"><button class="btn sm primary">保存调整</button><span class="hint" style="font-size:12px;color:#8B9AA1;align-self:center">原始计算结果不会被覆盖</span></div>
+</div></div>
+<div class="card"><div class="card-hd"><h2>未满足条件与改进项</h2></div>
+<ul style="font-size:13px;padding-left:18px;color:#1F2D33;line-height:1.9">
+<li>近 90 天同类问题重复 ≥5 次，未达到「低复发」条件</li>
+<li>平均处置时长 96 小时，超过制度要求 60 小时</li>
+<li>建议：增设 2 处截污井、每周 2 次加密巡查、纳入雨污分流改造</li></ul></div>
+</div></div></main></div></div></body></html>

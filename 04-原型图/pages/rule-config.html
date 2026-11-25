@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="zh-CN"><head><meta charset="utf-8"><title>热点识别规则配置 · 河道巡查与水环境问题处置系统</title>
+<link rel="stylesheet" href="../mock.css"></head>
+<body><div class="app">
+<aside class="side"><div class="brand"><span class="dot"></span>水环境巡查处置平台</div><nav><div class="grp">工作台</div><a class="item" href="dashboard.html"><svg><use href="../icons.svg#i-dashboard"/></svg>水环境热点看板</a><div class="grp">河道档案</div><a class="item" href="section-list.html"><svg><use href="../icons.svg#i-river"/></svg>河道断面</a><a class="item" href="section-detail.html"><svg><use href="../icons.svg#i-point"/></svg>断面详情</a><div class="grp">巡查管理</div><a class="item" href="task-list.html"><svg><use href="../icons.svg#i-task"/></svg>计划任务</a><a class="item" href="task-execute.html"><svg><use href="../icons.svg#i-water"/></svg>巡查记录</a><div class="grp">问题处置</div><a class="item" href="issue-report.html"><svg><use href="../icons.svg#i-issue"/></svg>问题上报</a><a class="item" href="dispatch.html"><svg><use href="../icons.svg#i-dispatch"/></svg>调度派单</a><a class="item" href="disposal.html"><svg><use href="../icons.svg#i-disposal"/></svg>整改跟踪</a><a class="item" href="review.html"><svg><use href="../icons.svg#i-review"/></svg>复核销号</a><div class="grp">统计分析</div><a class="item" href="hotspot.html"><svg><use href="../icons.svg#i-chart"/></svg>热点看板</a><a class="item on" href="rule-config.html"><svg><use href="../icons.svg#i-rule"/></svg>规则配置</a><div class="grp">系统管理</div><a class="item" href="sys.html"><svg><use href="../icons.svg#i-user"/></svg>用户与权限</a></nav></aside>
+<div class="main"><header class="top"><div class="crumb">河道巡查 / <b>统计分析</b></div>
+<div class="right"><span>河长办调度员 张启明</span><span>消息 3</span><div class="avatar">张</div></div></header>
+<main class="content">
+<h1 class="page">热点识别规则配置</h1><p class="subtitle">权重合计必须等于 100%，每次修改生成新版本并记录生效时间</p>
+<div class="grid2"><div>
+<div class="card"><div class="card-hd"><h2>当前规则 v3</h2><span class="hint">生效 2026-09-01 00:00 · 创建人 张启明</span></div>
+<div class="tbl-wrap"><table><thead><tr><th>输入因素</th><th>数据来源</th><th>缺失处理</th><th class="nowrap right">权重</th></tr></thead><tbody><tr><td>河段位置</td><td>river_section.area</td><td>不参与计算并提示补录</td><td class="nowrap right">15%</td></tr><tr><td>问题类型</td><td>river_issue.issue_type</td><td>不参与计算并提示补录</td><td class="nowrap right">20%</td></tr><tr><td>近 90 天次数</td><td>river_issue 聚合</td><td>按 0 计并标注</td><td class="nowrap right">25%</td></tr><tr><td>处置时长</td><td>派单至关闭时长</td><td>按平均时长估算</td><td class="nowrap right">15%</td></tr><tr><td>复核结果</td><td>review_record.pass</td><td>按未通过计</td><td class="nowrap right">15%</td></tr><tr><td>水质变化</td><td>water_quality_record</td><td>不参与计算并提示补录</td><td class="nowrap right">10%</td></tr></tbody></table></div>
+<div style="display:flex;justify-content:space-between;align-items:center;margin-top:12px">
+ <span style="font-size:13px">权重合计：<b class="num" style="color:#2D7A58">100%</b></span>
+ <div style="display:flex;gap:8px"><button class="btn">查看历史版本</button><button class="btn primary">保存为新版本</button></div></div>
+</div>
+<div class="card"><div class="card-hd"><h2>阈值设置</h2></div>
+<div class="filter">
+ <div class="f"><label>高风险阈值</label><input class="inp" value="75" style="width:110px"></div>
+ <div class="f"><label>中风险阈值</label><input class="inp" value="50" style="width:110px"></div>
+ <div class="f"><label>统计窗口（天）</label><input class="inp" value="90" style="width:110px"></div>
+ <div class="f"><label>次数满分线</label><input class="inp" value="5" style="width:110px"></div>
+</div>
+<div class="note">修改权重后仅影响新计算或主动重新计算的数据；历史计算结果保留原规则版本快照，不可覆盖。</div></div>
+</div>
+<div>
+<div class="card"><div class="card-hd"><h2>版本记录</h2></div>
+<div class="tbl-wrap"><table><thead><tr><th class="nowrap">版本</th><th class="nowrap">生效时间</th><th class="nowrap">修改人</th><th>变更说明</th><th class="nowrap">状态</th></tr></thead><tbody><tr><td class="nowrap">v3</td><td class="nowrap">2026-09-01</td><td class="nowrap">张启明</td><td>提高次数权重 20%→25%</td><td class="nowrap"><span class="tag t-4">启用</span></td></tr><tr><td class="nowrap">v2</td><td class="nowrap">2026-06-15</td><td class="nowrap">张启明</td><td>新增水质变化因素</td><td class="nowrap"><span class="tag t-5">历史</span></td></tr><tr><td class="nowrap">v1</td><td class="nowrap">2026-03-01</td><td class="nowrap">系统初始化</td><td>初始规则</td><td class="nowrap"><span class="tag t-5">历史</span></td></tr></tbody></table></div>
+</div>
+<div class="card"><div class="card-hd"><h2>计算公式说明</h2></div>
+<pre style="font-family:ui-monospace,Menlo,monospace;font-size:12px;background:#F3F7F8;padding:12px;border-radius:4px;overflow:auto;line-height:1.9">总分 = Σ(因素归一化得分 × 权重)
+  position = 敏感区? 1.0 : 0.6
+  type     = 非法排放 1.0 / 水色异常 0.8 / 岸线垃圾 0.6 ...
+  count    = min(近90天次数 / 5, 1)
+  duration = min(平均处置时长 / 60h, 1)
+  review   = 1 - 通过率
+  quality  = 水质恶化程度(0~1)
+等级：总分 ≥ 75 高；≥ 50 中；否则低
+推荐：高 → 纳入专项治理；中 → 加密巡查；低 → 常规管理</pre>
+<div class="note">计算过程逐项落库（river_patrol_score），保存输入快照、规则版本、各项得分与生成时间，保证可追溯。</div></div>
+</div></div></main></div></div></body></html>

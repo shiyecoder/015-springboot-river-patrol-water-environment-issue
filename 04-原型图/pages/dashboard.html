@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="zh-CN"><head><meta charset="utf-8"><title>水环境热点看板 · 河道巡查与水环境问题处置系统</title>
+<link rel="stylesheet" href="../mock.css"></head>
+<body><div class="app">
+<aside class="side"><div class="brand"><span class="dot"></span>水环境巡查处置平台</div><nav><div class="grp">工作台</div><a class="item on" href="dashboard.html"><svg><use href="../icons.svg#i-dashboard"/></svg>水环境热点看板</a><div class="grp">河道档案</div><a class="item" href="section-list.html"><svg><use href="../icons.svg#i-river"/></svg>河道断面</a><a class="item" href="section-detail.html"><svg><use href="../icons.svg#i-point"/></svg>断面详情</a><div class="grp">巡查管理</div><a class="item" href="task-list.html"><svg><use href="../icons.svg#i-task"/></svg>计划任务</a><a class="item" href="task-execute.html"><svg><use href="../icons.svg#i-water"/></svg>巡查记录</a><div class="grp">问题处置</div><a class="item" href="issue-report.html"><svg><use href="../icons.svg#i-issue"/></svg>问题上报</a><a class="item" href="dispatch.html"><svg><use href="../icons.svg#i-dispatch"/></svg>调度派单</a><a class="item" href="disposal.html"><svg><use href="../icons.svg#i-disposal"/></svg>整改跟踪</a><a class="item" href="review.html"><svg><use href="../icons.svg#i-review"/></svg>复核销号</a><div class="grp">统计分析</div><a class="item" href="hotspot.html"><svg><use href="../icons.svg#i-chart"/></svg>热点看板</a><a class="item" href="rule-config.html"><svg><use href="../icons.svg#i-rule"/></svg>规则配置</a><div class="grp">系统管理</div><a class="item" href="sys.html"><svg><use href="../icons.svg#i-user"/></svg>用户与权限</a></nav></aside>
+<div class="main"><header class="top"><div class="crumb">河道巡查 / <b>工作台</b></div>
+<div class="right"><span>河长办调度员 张启明</span><span>消息 3</span><div class="avatar">张</div></div></header>
+<main class="content">
+<h1 class="page">水环境热点看板</h1>
+<p class="subtitle">统计口径：2026-10-01 至 2026-10-31 · 数据由巡查记录与问题单实时汇总</p>
+<div class="metrics">
+  <div class="metric"><div class="lb">巡查完成率</div><div class="vl num">92.6<small>%</small></div><div class="df">较上月 +3.2%</div></div>
+  <div class="metric"><div class="lb">本月问题数</div><div class="vl num">38<small>件</small></div><div class="df">重大 7 件</div></div>
+  <div class="metric"><div class="lb">按期处置率</div><div class="vl num">85.4<small>%</small></div><div class="df">较上月 +1.8%</div></div>
+  <div class="metric"><div class="lb">问题复发率</div><div class="vl num">11.2<small>%</small></div><div class="df">较上月 -2.4%</div></div>
+  <div class="metric"><div class="lb">复查通过率</div><div class="vl num">88.0<small>%</small></div><div class="df">驳回 6 次</div></div>
+  <div class="metric"><div class="lb">逾期未处置</div><div class="vl num" style="color:#B03035">4<small>件</small></div><div class="df" style="color:#B03035">需督办</div></div>
+</div>
+<div class="charts">
+  <div class="chart"><h3>问题上报与关闭趋势 <span>近 6 个月</span></h3>
+    <div class="line"><svg viewBox="0 0 300 110" preserveAspectRatio="none">
+      <polyline points="0,80 50,68 100,72 150,50 200,44 250,30 300,26" fill="none" stroke="#15344A" stroke-width="2"/>
+      <polyline points="0,96 50,88 100,84 150,74 200,66 250,58 300,52" fill="none" stroke="#237A8B" stroke-width="2" stroke-dasharray="4 3"/>
+      <line x1="0" y1="108" x2="300" y2="108" stroke="#DCE5E8"/></svg></div>
+    <div class="legend"><span><i style="background:#15344A"></i>上报</span><span><i style="background:#237A8B"></i>关闭</span></div></div>
+  <div class="chart"><h3>问题状态分布 <span>共 38 件</span></h3>
+    <div class="bars"><i style="height:60%"></i><i style="height:82%"></i><i style="height:100%"></i><i style="height:48%"></i><i style="height:70%"></i><i style="height:26%"></i></div>
+    <div class="legend"><span>待确认</span><span>待派单</span><span>处置中</span><span>待复查</span><span>已关闭</span><span>无效</span></div></div>
+  <div class="chart"><h3>问题类型构成 <span>近 30 天</span></h3>
+    <div class="bars"><i style="height:92%"></i><i style="height:74%"></i><i style="height:56%"></i><i style="height:40%"></i><i style="height:28%"></i></div>
+    <div class="legend"><span>非法排放</span><span>岸线垃圾</span><span>漂浮物</span><span>设施损坏</span><span>水色异常</span></div></div>
+  <div class="chart"><h3>责任单位处置时效 <span>小时</span></h3>
+    <div class="bars"><i style="height:44%"></i><i style="height:66%"></i><i style="height:88%"></i><i style="height:54%"></i><i style="height:76%"></i></div>
+    <div class="legend"><span>水务集团</span><span>街道办</span><span>环卫中心</span><span>城管中队</span><span>园区管委</span></div></div>
+  <div class="chart"><h3>水质等级分布 <span>断面 24 个</span></h3>
+    <div class="bars"><i style="height:36%"></i><i style="height:66%"></i><i style="height:92%"></i><i style="height:52%"></i><i style="height:22%"></i></div>
+    <div class="legend"><span>Ⅱ类</span><span>Ⅲ类</span><span>Ⅳ类</span><span>Ⅴ类</span><span>劣Ⅴ类</span></div></div>
+  <div class="chart"><h3>复发热点识别结果 <span>规则 v3</span></h3>
+    <div class="bars"><i style="height:100%"></i><i style="height:78%"></i><i style="height:62%"></i><i style="height:44%"></i><i style="height:30%"></i></div>
+    <div class="legend"><span>石鼓渠集镇段</span><span>青枫河南闸口</span><span>白鹭溪老桥</span><span>东湖南段</span><span>其他</span></div></div>
+</div></main></div></div></body></html>

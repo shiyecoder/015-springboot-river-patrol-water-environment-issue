@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="zh-CN"><head><meta charset="utf-8"><title>水环境热点看板 · 河道巡查与水环境问题处置系统</title>
+<link rel="stylesheet" href="../mock.css"></head>
+<body><div class="app">
+<aside class="side"><div class="brand"><span class="dot"></span>水环境巡查处置平台</div><nav><div class="grp">工作台</div><a class="item" href="dashboard.html"><svg><use href="../icons.svg#i-dashboard"/></svg>水环境热点看板</a><div class="grp">河道档案</div><a class="item" href="section-list.html"><svg><use href="../icons.svg#i-river"/></svg>河道断面</a><a class="item" href="section-detail.html"><svg><use href="../icons.svg#i-point"/></svg>断面详情</a><div class="grp">巡查管理</div><a class="item" href="task-list.html"><svg><use href="../icons.svg#i-task"/></svg>计划任务</a><a class="item" href="task-execute.html"><svg><use href="../icons.svg#i-water"/></svg>巡查记录</a><div class="grp">问题处置</div><a class="item" href="issue-report.html"><svg><use href="../icons.svg#i-issue"/></svg>问题上报</a><a class="item" href="dispatch.html"><svg><use href="../icons.svg#i-dispatch"/></svg>调度派单</a><a class="item" href="disposal.html"><svg><use href="../icons.svg#i-disposal"/></svg>整改跟踪</a><a class="item" href="review.html"><svg><use href="../icons.svg#i-review"/></svg>复核销号</a><div class="grp">统计分析</div><a class="item on" href="hotspot.html"><svg><use href="../icons.svg#i-chart"/></svg>热点看板</a><a class="item" href="rule-config.html"><svg><use href="../icons.svg#i-rule"/></svg>规则配置</a><div class="grp">系统管理</div><a class="item" href="sys.html"><svg><use href="../icons.svg#i-user"/></svg>用户与权限</a></nav></aside>
+<div class="main"><header class="top"><div class="crumb">河道巡查 / <b>统计分析</b></div>
+<div class="right"><span>河长办调度员 张启明</span><span>消息 3</span><div class="avatar">张</div></div></header>
+<main class="content">
+<h1 class="page">水环境热点看板</h1><p class="subtitle">按河段、问题类型与时间窗口统计复发次数，输出专项治理河段清单</p>
+<div class="filter">
+ <div class="f"><label>时间窗口</label><select class="sel"><option>近 90 天</option><option>近 180 天</option><option>本年度</option></select></div>
+ <div class="f"><label>河段</label><select class="sel"><option>全部河段</option></select></div>
+ <div class="f"><label>问题类型</label><select class="sel"><option>全部类型</option></select></div>
+ <div class="f"><label>规则版本</label><select class="sel"><option>v3（2026-09-01 生效）</option><option>v2</option></select></div>
+ <button class="btn primary">重新计算</button><button class="btn">导出清单</button>
+</div>
+<div class="metrics" style="grid-template-columns:repeat(4,1fr)">
+ <div class="metric"><div class="lb">热点河段数</div><div class="vl num">5<small>个</small></div><div class="df">高 2 / 中 3</div></div>
+ <div class="metric"><div class="lb">推荐采纳率</div><div class="vl num">72.0<small>%</small></div><div class="df">近 90 天</div></div>
+ <div class="metric"><div class="lb">人工调整率</div><div class="vl num">16.0<small>%</small></div><div class="df">调整均填写原因</div></div>
+ <div class="metric"><div class="lb">调整后复发下降</div><div class="vl num">-23.5<small>%</small></div><div class="df">专项治理河段</div></div>
+</div>
+<div class="card" style="padding:0"><div class="card-hd" style="padding:16px 16px 0"><h2>热点河段排行</h2><span class="hint">按总分倒序，点击查看计算明细</span></div>
+<div class="tbl-wrap"><table><thead><tr><th class="nowrap">排名</th><th>河段</th><th>主要问题类型</th><th class="nowrap right">近 90 天次数</th><th class="nowrap right">平均处置时长</th><th class="nowrap right">总分</th><th class="nowrap">等级</th><th class="nowrap">推荐</th><th class="nowrap">操作</th></tr></thead><tbody><tr><td class="nowrap">1</td><td>HD-0032 石鼓渠·集镇段</td><td>非法排放</td><td class="nowrap right">7</td><td class="nowrap right">96 h</td><td class="nowrap right">78.4</td><td class="nowrap"><span class="tag t-x">高</span></td><td class="nowrap">纳入专项治理</td><td class="nowrap"><a href="review.html">明细</a></td></tr><tr><td class="nowrap">2</td><td>HD-0022 青枫河·南闸口段</td><td>水色异常</td><td class="nowrap right">6</td><td class="nowrap right">82 h</td><td class="nowrap right">76.1</td><td class="nowrap"><span class="tag t-x">高</span></td><td class="nowrap">纳入专项治理</td><td class="nowrap"><a href="#">明细</a></td></tr><tr><td class="nowrap">3</td><td>HD-0013 白鹭溪·老桥段</td><td>岸线垃圾</td><td class="nowrap right">5</td><td class="nowrap right">64 h</td><td class="nowrap right">62.8</td><td class="nowrap"><span class="tag t-3">中</span></td><td class="nowrap">加密巡查</td><td class="nowrap"><a href="#">明细</a></td></tr><tr><td class="nowrap">4</td><td>HD-0042 东湖连通渠·南段</td><td>岸线垃圾</td><td class="nowrap right">4</td><td class="nowrap right">70 h</td><td class="nowrap right">55.2</td><td class="nowrap"><span class="tag t-3">中</span></td><td class="nowrap">加密巡查</td><td class="nowrap"><a href="#">明细</a></td></tr><tr><td class="nowrap">5</td><td>HD-0021 青枫河·湿地公园段</td><td>漂浮物</td><td class="nowrap right">3</td><td class="nowrap right">48 h</td><td class="nowrap right">51.6</td><td class="nowrap"><span class="tag t-3">中</span></td><td class="nowrap">观察</td><td class="nowrap"><a href="#">明细</a></td></tr><tr><td class="nowrap">6</td><td>HD-0041 东湖连通渠·北段</td><td>水色异常</td><td class="nowrap right">2</td><td class="nowrap right">40 h</td><td class="nowrap right">38.9</td><td class="nowrap"><span class="tag t-4">低</span></td><td class="nowrap">常规管理</td><td class="nowrap"><a href="#">明细</a></td></tr></tbody></table></div>
+</div>
+<div class="grid3" style="margin-top:16px">
+ <div class="chart"><h3>复发次数按类型 <span>近 90 天</span></h3><div class="bars"><i style="height:95%"></i><i style="height:70%"></i><i style="height:52%"></i><i style="height:38%"></i><i style="height:24%"></i></div>
+  <div class="legend"><span>非法排放</span><span>岸线垃圾</span><span>漂浮物</span><span>设施损坏</span><span>水色异常</span></div></div>
+ <div class="chart"><h3>结果等级分布 <span>共 24 个断面</span></h3><div class="bars"><i style="height:20%"></i><i style="height:38%"></i><i style="height:88%"></i></div>
+  <div class="legend"><span>高 2</span><span>中 3</span><span>低 19</span></div></div>
+ <div class="chart"><h3>人工调整率趋势 <span>近 6 个月</span></h3><div class="line"><svg viewBox="0 0 300 110" preserveAspectRatio="none">
+  <polyline points="0,30 50,42 100,50 150,58 200,64 250,70 300,72" fill="none" stroke="#2D5B6B" stroke-width="2"/><line x1="0" y1="108" x2="300" y2="108" stroke="#DCE5E8"/></svg></div>
+  <div class="legend"><span><i style="background:#2D5B6B"></i>调整率</span></div></div>
+</div></main></div></div></body></html>

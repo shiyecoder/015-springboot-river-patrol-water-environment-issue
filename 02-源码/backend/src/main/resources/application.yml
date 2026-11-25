@@ -1,0 +1,38 @@
+server:
+  port: 8084
+  tomcat:
+    max-threads: 60
+
+spring:
+  application:
+    name: river-patrol
+  datasource:
+    url: jdbc:mysql://127.0.0.1:3306/new_015?useUnicode=true&characterEncoding=utf8&serverTimezone=Asia/Shanghai&allowPublicKeyRetrieval=true&useSSL=false
+    username: root
+    password: "123456"
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    hikari:
+      maximum-pool-size: 10
+      minimum-idle: 2
+  servlet:
+    multipart:
+      max-file-size: 20MB
+      max-request-size: 40MB
+  jackson:
+    date-format: yyyy-MM-dd HH:mm:ss
+    time-zone: Asia/Shanghai
+
+mybatis-plus:
+  configuration:
+    map-underscore-to-camel-case: true
+    log-impl: org.apache.ibatis.logging.nologging.NoLoggingImpl
+  global-config:
+    db-config:
+      logic-delete-field: deleted
+      logic-delete-value: 1
+      logic-not-delete-value: 0
+
+app:
+  jwt-secret: river-patrol-2026-secret-key-for-graduation-project-lane5
+  upload-dir: ./uploads/
+  default-password: admin123
